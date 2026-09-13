@@ -31,6 +31,10 @@ def create_job(request: JobRequest):
     return job
 
 
+from scheduler.database import engine
+from scheduler.db_models import JobDB
+
+
 
 @app.get("/health") 
 def health_check() :
