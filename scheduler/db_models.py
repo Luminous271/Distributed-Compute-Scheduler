@@ -16,6 +16,12 @@ class JobDB(Base) :
 
     status: Mapped[str] = mapped_column(String, nullable=False)
 
+    priority: Mapped[int] = mapped_column(
+        Integer,
+        default=0,
+        nullable=False,
+    )   
+    
     worker_id: Mapped[str | None] = mapped_column(
         String,
         nullable=True,

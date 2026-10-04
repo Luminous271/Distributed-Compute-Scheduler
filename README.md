@@ -1,5 +1,15 @@
 # IDEA
 
+
+# Helpful commands (right now application runs from multiple different terminals)
+- python -m scheduler.retry_manager_main      
+- python -m scheduler.monitor_main
+- python -m worker.main --worker-id worker-1
+- python -m uvicorn scheduler.api:app --reload
+- python -m scheduler.refresh_tables
+
+
+
 Distributed Compute Scheduler
 
 A fault-tolerant distributed compute platform for scheduling heterogeneous workloads across dynamically scaled workers.

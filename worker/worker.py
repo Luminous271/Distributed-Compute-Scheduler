@@ -6,6 +6,8 @@ import time
 from scheduler.retry_manager import RetryManager
 from worker.execution_controller import execute_with_timeout
 
+from scheduler.database import SessionLocal
+from scheduler.db_models import JobDB as DBJob
 
 # worker continuously asks redis, is there work? if so process job or no wait.
 class Worker:
